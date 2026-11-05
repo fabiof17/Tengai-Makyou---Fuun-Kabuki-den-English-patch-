@@ -1,80 +1,6 @@
 # Tengai Makyō: Fūun Kabuki-den — English patch (v1.0)
 
-**[Français](#français) · [Español](#español) · [English](#english)**
-
----
-
-## English
-
-### About the game
-
-*Tengai Makyō: Fūun Kabuki-den* (天外魔境 風雲カブキ伝) is a role-playing game released in 1993 for the PC Engine **Super CD-ROM²**. You play Kabuki Danjūrō, the flamboyant kabuki actor from *Tengai Makyō II*, who travels from Kyoto to London to defeat the Demon Cult. The game was only released in Japan.
-
-### What the patch does
-
-This patch translates the game from Japanese into English:
-
-- **All story dialogue**, from the opening at the theater in Kyoto to the ending and epilogue in London.
-- **Cutscenes**, keeping the original text speed and pauses so the lines stay in sync with the voices and animation.
-- **Menus**: field menu, status, items, equipment, arts, settings, save and load screens, shops, the storehouse, the battle menu, the tactics window and the item quantity window.
-- **Names** of items, equipment, spells and arts.
-- **Bonus content**: the Uzume bonus dungeon, the Nekodaruma house (scene gallery, sound test, music list, bestiary) and the gambling mini-game.
-
-To make the English fit, the patch adds a small 8×8 font and an English text engine with per-block compression.
-
-Only **track 02** (the data track) is modified. The audio tracks, including all voice acting, are left untouched.
-
-### Requirements
-
-You need a dump of the Japanese game in **BIN/CUE** format (Redump naming):
-
-| File | MD5 | CRC32 |
-|---|---|---|
-| `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin` | `ec992a55a340f7d11726d09e3cb7051d` | `21B2006D` |
-
-You also need an emulator that runs PC Engine CD games with a Super System Card BIOS, for example **Mednafen**.
-
-### How to apply the patch
-
-There are two ways. Both produce the same result. The patched track 02 has the MD5 `ac3d92febf35f9b1af69f690ca885afc`.
-
-#### Option A — PowerShell script (Windows, no extra tool)
-
-1. Copy `patch/Appliquer_patch_EN-v1.0.ps1` into the folder that holds the game's `.cue` and `.bin` files.
-2. Right-click the script and choose **Run with PowerShell**.
-   If Windows refuses to run it, open the file's **Properties**, tick **Unblock**, click OK and try again.
-3. The script checks the original track, then creates two new files next to it:
-   - `... (Track 02) [EN-v1.0].bin`
-   - `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) [EN-v1.0].cue`
-4. Open the new `[EN-v1.0].cue` in your emulator.
-
-Your original files are not modified. The script's messages are in French.
-
-#### Option B — xdelta (any system)
-
-1. Apply `patch/kabukiden_en_v1.0_track02.xdelta` to the original **track 02** with [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) or `xdelta3`:
-   ```
-   xdelta3 -d -s "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin" kabukiden_en_v1.0_track02.xdelta "Track 02 [EN].bin"
-   ```
-2. Either replace the original track 02 with the patched file, or make a copy of the `.cue` and point its track 02 line at the new file.
-
-### Known limitations
-
-- In cutscenes, the English has to fit in exactly the space of the Japanese text, so some lines are short or terse.
-- In regular dialogue, the original text pauses and speed changes were not carried over. The text displays at normal speed.
-- A few leftover sentence fragments may still appear in Japanese.
-- In the gambling room, item names in the item menu may show in Japanese.
-- The developer debug screens and the hidden sound test are not translated.
-- The tactics window in battle and some late-game scenes have not been fully tested on real gameplay. Please report any problem.
-
-### Reporting problems
-
-Open an issue on this repository. Include the scene or location, what you see (a screenshot helps) and what you expected.
-
-### Credits
-
-- Translation and patch: **fabiof17**, made with **Claude** (Anthropic).
-- *Tengai Makyō: Fūun Kabuki-den* © Hudson Soft / Red Company. This is a non-commercial fan translation. It contains no game data: you must own the game.
+**[Français](#français) · [English](#english) · [Español](#español)**
 
 ---
 
@@ -149,6 +75,80 @@ Ouvrez une *issue* sur ce dépôt. Indiquez la scène ou le lieu, ce que vous vo
 
 - Traduction et patch : **fabiof17**, réalisés avec **Claude** (Anthropic).
 - *Tengai Makyō: Fūun Kabuki-den* © Hudson Soft / Red Company. Cette traduction de fan est non commerciale. Elle ne contient aucune donnée du jeu : vous devez posséder le jeu.
+
+---
+
+## English
+
+### About the game
+
+*Tengai Makyō: Fūun Kabuki-den* (天外魔境 風雲カブキ伝) is a role-playing game released in 1993 for the PC Engine **Super CD-ROM²**. You play Kabuki Danjūrō, the flamboyant kabuki actor from *Tengai Makyō II*, who travels from Kyoto to London to defeat the Demon Cult. The game was only released in Japan.
+
+### What the patch does
+
+This patch translates the game from Japanese into English:
+
+- **All story dialogue**, from the opening at the theater in Kyoto to the ending and epilogue in London.
+- **Cutscenes**, keeping the original text speed and pauses so the lines stay in sync with the voices and animation.
+- **Menus**: field menu, status, items, equipment, arts, settings, save and load screens, shops, the storehouse, the battle menu, the tactics window and the item quantity window.
+- **Names** of items, equipment, spells and arts.
+- **Bonus content**: the Uzume bonus dungeon, the Nekodaruma house (scene gallery, sound test, music list, bestiary) and the gambling mini-game.
+
+To make the English fit, the patch adds a small 8×8 font and an English text engine with per-block compression.
+
+Only **track 02** (the data track) is modified. The audio tracks, including all voice acting, are left untouched.
+
+### Requirements
+
+You need a dump of the Japanese game in **BIN/CUE** format (Redump naming):
+
+| File | MD5 | CRC32 |
+|---|---|---|
+| `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin` | `ec992a55a340f7d11726d09e3cb7051d` | `21B2006D` |
+
+You also need an emulator that runs PC Engine CD games with a Super System Card BIOS, for example **Mednafen**.
+
+### How to apply the patch
+
+There are two ways. Both produce the same result. The patched track 02 has the MD5 `ac3d92febf35f9b1af69f690ca885afc`.
+
+#### Option A — PowerShell script (Windows, no extra tool)
+
+1. Copy `patch/Appliquer_patch_EN-v1.0.ps1` into the folder that holds the game's `.cue` and `.bin` files.
+2. Right-click the script and choose **Run with PowerShell**.
+   If Windows refuses to run it, open the file's **Properties**, tick **Unblock**, click OK and try again.
+3. The script checks the original track, then creates two new files next to it:
+   - `... (Track 02) [EN-v1.0].bin`
+   - `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) [EN-v1.0].cue`
+4. Open the new `[EN-v1.0].cue` in your emulator.
+
+Your original files are not modified. The script's messages are in French.
+
+#### Option B — xdelta (any system)
+
+1. Apply `patch/kabukiden_en_v1.0_track02.xdelta` to the original **track 02** with [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) or `xdelta3`:
+   ```
+   xdelta3 -d -s "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin" kabukiden_en_v1.0_track02.xdelta "Track 02 [EN].bin"
+   ```
+2. Either replace the original track 02 with the patched file, or make a copy of the `.cue` and point its track 02 line at the new file.
+
+### Known limitations
+
+- In cutscenes, the English has to fit in exactly the space of the Japanese text, so some lines are short or terse.
+- In regular dialogue, the original text pauses and speed changes were not carried over. The text displays at normal speed.
+- A few leftover sentence fragments may still appear in Japanese.
+- In the gambling room, item names in the item menu may show in Japanese.
+- The developer debug screens and the hidden sound test are not translated.
+- The tactics window in battle and some late-game scenes have not been fully tested on real gameplay. Please report any problem.
+
+### Reporting problems
+
+Open an issue on this repository. Include the scene or location, what you see (a screenshot helps) and what you expected.
+
+### Credits
+
+- Translation and patch: **fabiof17**, made with **Claude** (Anthropic).
+- *Tengai Makyō: Fūun Kabuki-den* © Hudson Soft / Red Company. This is a non-commercial fan translation. It contains no game data: you must own the game.
 
 ---
 
