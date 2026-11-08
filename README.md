@@ -1,4 +1,4 @@
-# Tengai Makyō: Fūun Kabuki-den — English patch (v1.0.16)
+# Tengai Makyō: Fūun Kabuki-den — English patch (v1.0.17)
 
 **[Français](#français) · [English](#english) · [Español](#español)**
 
@@ -36,25 +36,25 @@ Il vous faut aussi un émulateur PC Engine CD avec le BIOS Super System Card, pa
 
 ### Comment appliquer le patch
 
-Il y a deux méthodes. Les deux donnent le même résultat. La piste 02 patchée a pour MD5 `312621b3f74d6626f96225cec9eb8f2a`.
+Il y a deux méthodes. Les deux donnent le même résultat. La piste 02 patchée a pour MD5 `0332adc86aecc64814fb562c256f51e0`.
 
 #### Méthode A — script PowerShell (Windows, aucun outil à installer)
 
-1. Copiez `patch/Appliquer_patch_EN-v1.0.16.ps1` dans le dossier qui contient le `.cue` et les `.bin` du jeu.
+1. Copiez `patch/Appliquer_patch_EN-v1.0.17.ps1` dans le dossier qui contient le `.cue` et les `.bin` du jeu.
 2. Faites un clic droit sur le script et choisissez **Exécuter avec PowerShell**.
    Si Windows refuse de le lancer, ouvrez les **Propriétés** du fichier, cochez **Débloquer**, validez et réessayez.
 3. Le script vérifie la piste d'origine, puis crée deux nouveaux fichiers à côté :
-   - `... (Track 02) [EN-v1.0.16].bin`
-   - `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) [EN-v1.0.16].cue`
-4. Ouvrez le nouveau fichier `[EN-v1.0.16].cue` dans votre émulateur.
+   - `... (Track 02) [EN-v1.0.17].bin`
+   - `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) [EN-v1.0.17].cue`
+4. Ouvrez le nouveau fichier `[EN-v1.0.17].cue` dans votre émulateur.
 
 Vos fichiers d'origine ne sont pas modifiés.
 
 #### Méthode B — xdelta (tous systèmes)
 
-1. Appliquez `patch/kabukiden_en_v1.0.16_track02.xdelta` à la **piste 02** d'origine avec [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) ou `xdelta3` :
+1. Appliquez `patch/kabukiden_en_v1.0.17_track02.xdelta` à la **piste 02** d'origine avec [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) ou `xdelta3` :
    ```
-   xdelta3 -d -s "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin" kabukiden_en_v1.0.16_track02.xdelta "Track 02 [EN].bin"
+   xdelta3 -d -s "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin" kabukiden_en_v1.0.17_track02.xdelta "Track 02 [EN].bin"
    ```
 2. Remplacez la piste 02 d'origine par le fichier patché, ou faites une copie du `.cue` et modifiez sa ligne de la piste 02 pour qu'elle pointe vers le nouveau fichier.
 
@@ -110,25 +110,25 @@ You also need an emulator that runs PC Engine CD games with a Super System Card 
 
 ### How to apply the patch
 
-There are two ways. Both produce the same result. The patched track 02 has the MD5 `312621b3f74d6626f96225cec9eb8f2a`.
+There are two ways. Both produce the same result. The patched track 02 has the MD5 `0332adc86aecc64814fb562c256f51e0`.
 
 #### Option A — PowerShell script (Windows, no extra tool)
 
-1. Copy `patch/Appliquer_patch_EN-v1.0.16.ps1` into the folder that holds the game's `.cue` and `.bin` files.
+1. Copy `patch/Appliquer_patch_EN-v1.0.17.ps1` into the folder that holds the game's `.cue` and `.bin` files.
 2. Right-click the script and choose **Run with PowerShell**.
    If Windows refuses to run it, open the file's **Properties**, tick **Unblock**, click OK and try again.
 3. The script checks the original track, then creates two new files next to it:
-   - `... (Track 02) [EN-v1.0.16].bin`
-   - `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) [EN-v1.0.16].cue`
-4. Open the new `[EN-v1.0.16].cue` in your emulator.
+   - `... (Track 02) [EN-v1.0.17].bin`
+   - `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) [EN-v1.0.17].cue`
+4. Open the new `[EN-v1.0.17].cue` in your emulator.
 
 Your original files are not modified. The script's messages are in French.
 
 #### Option B — xdelta (any system)
 
-1. Apply `patch/kabukiden_en_v1.0.16_track02.xdelta` to the original **track 02** with [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) or `xdelta3`:
+1. Apply `patch/kabukiden_en_v1.0.17_track02.xdelta` to the original **track 02** with [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) or `xdelta3`:
    ```
-   xdelta3 -d -s "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin" kabukiden_en_v1.0.16_track02.xdelta "Track 02 [EN].bin"
+   xdelta3 -d -s "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin" kabukiden_en_v1.0.17_track02.xdelta "Track 02 [EN].bin"
    ```
 2. Either replace the original track 02 with the patched file, or make a copy of the `.cue` and point its track 02 line at the new file.
 
@@ -184,25 +184,25 @@ También necesitas un emulador de PC Engine CD con la BIOS Super System Card, po
 
 ### Cómo aplicar el parche
 
-Hay dos métodos. Ambos dan el mismo resultado. La pista 02 parcheada tiene el MD5 `312621b3f74d6626f96225cec9eb8f2a`.
+Hay dos métodos. Ambos dan el mismo resultado. La pista 02 parcheada tiene el MD5 `0332adc86aecc64814fb562c256f51e0`.
 
 #### Método A — script de PowerShell (Windows, sin instalar nada)
 
-1. Copia `patch/Appliquer_patch_EN-v1.0.16.ps1` en la carpeta que contiene el `.cue` y los `.bin` del juego.
+1. Copia `patch/Appliquer_patch_EN-v1.0.17.ps1` en la carpeta que contiene el `.cue` y los `.bin` del juego.
 2. Haz clic derecho en el script y elige **Ejecutar con PowerShell**.
    Si Windows se niega a ejecutarlo, abre las **Propiedades** del archivo, marca **Desbloquear**, acepta y vuelve a intentarlo.
 3. El script comprueba la pista original y crea dos archivos nuevos a su lado:
-   - `... (Track 02) [EN-v1.0.16].bin`
-   - `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) [EN-v1.0.16].cue`
-4. Abre el nuevo `[EN-v1.0.16].cue` en tu emulador.
+   - `... (Track 02) [EN-v1.0.17].bin`
+   - `Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) [EN-v1.0.17].cue`
+4. Abre el nuevo `[EN-v1.0.17].cue` en tu emulador.
 
 Tus archivos originales no se modifican. Los mensajes del script están en francés.
 
 #### Método B — xdelta (cualquier sistema)
 
-1. Aplica `patch/kabukiden_en_v1.0.16_track02.xdelta` a la **pista 02** original con [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) o `xdelta3`:
+1. Aplica `patch/kabukiden_en_v1.0.17_track02.xdelta` a la **pista 02** original con [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) o `xdelta3`:
    ```
-   xdelta3 -d -s "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin" kabukiden_en_v1.0.16_track02.xdelta "Track 02 [EN].bin"
+   xdelta3 -d -s "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan) (Track 02).bin" kabukiden_en_v1.0.17_track02.xdelta "Track 02 [EN].bin"
    ```
 2. Sustituye la pista 02 original por el archivo parcheado, o haz una copia del `.cue` y cambia su línea de la pista 02 para que apunte al nuevo archivo.
 
